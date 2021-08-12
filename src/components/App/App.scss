@@ -1,0 +1,15 @@
+
+body {
+  background-color: #282c34;
+  padding: 3em;
+}
+
+.app {
+  color: #fff;
+  text-align: center;
+
+  &__header {
+    font-size: 2em;
+    margin-bottom: 2em;
+  }
+}
