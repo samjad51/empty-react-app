@@ -1,7 +1,7 @@
 
 body {
   background-color: #282c34;
-  padding: 3em;
+  padding: 3em 1em;
 }
 
 .app {
@@ -11,5 +11,11 @@ body {
   &__header {
     font-size: 2em;
     margin-bottom: 2em;
+  }
+
+  &__container {
+    max-width: 50%;
+    min-width: 300px;
+    margin: 0 auto;
   }
 }

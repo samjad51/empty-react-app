@@ -1,0 +1,29 @@
+.results-List {
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    margin-top: -4px;
+    text-align: left;
+
+    &__list {
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            display: block;
+            padding: 0.5em 1em;
+
+            &:focus,
+            &:hover {
+                background-color: cornflowerblue;
+                color: #fff;
+            }
+        }
+    }
+}

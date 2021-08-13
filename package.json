@@ -31,7 +31,7 @@
     },
     "scripts": {
         "start": "npm run start:mock | react-scripts start",
-        "start:mock": "json-server --port 4000 --routes ./mock/routes.json ./mock/db.json --delay 500",
+        "start:mock": "json-server --port 4000 --routes ./mock/routes.json ./mock/db.json --delay 200",
         "build": "react-scripts build",
         "test": "react-scripts test"
     },

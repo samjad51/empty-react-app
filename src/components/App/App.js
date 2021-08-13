@@ -1,4 +1,6 @@
 import React from 'react';
+import SearchInput from 'containers/SearchInput';
+import ResultsList from 'containers/ResultsList';
 import './App.scss';
 
 function App() {
@@ -6,7 +8,8 @@ function App() {
         <div className="app">
             <header className="app__header">Awesome Search</header>
             <div className="app__container">
-                Please add search box component here
+                <SearchInput />
+                <ResultsList />
             </div>
         </div>
     );

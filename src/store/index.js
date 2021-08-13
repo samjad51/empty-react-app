@@ -6,7 +6,10 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import rootReducer from 'reducers';
 
-export const initState = { query: '' };
+export const initState = {
+    query: '',
+    resultsData: [],
+};
 
 function configureStore(state) {
     const middlewares = [thunk];
