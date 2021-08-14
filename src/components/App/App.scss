@@ -13,3 +13,32 @@ body {
     margin-bottom: 2em;
   }
 }
+
+.search{
+  width: 250px;
+
+  &:focus{
+    border: 1px solid lightskyblue;
+    outline: none;
+    box-shadow: 1px 1p 5px lightskyblue;
+  }
+
+  &__results{
+    text-align: left;
+    width: 250px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: darkgray;
+    position: relative;
+    z-index: 10001;
+
+    > *{
+      cursor: pointer;
+      padding: 3px;
+      margin: 1px;
+      background: lightgray;
+      color: blue;
+    }
+  }
+}
