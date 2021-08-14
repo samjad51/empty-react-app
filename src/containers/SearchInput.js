@@ -1,13 +1,16 @@
 import { connect } from 'react-redux';
-import getSearchResultsAction from 'actions/searchAction';
+import {
+    getSearchResultsAction, clearSearchResultsAction,
+} from 'actions/searchAction';
 
 import SearchInput from 'components/SearchInput';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => ({ searchResults: state.searchResults });
 
-};
-
-const mapDispatchToProps = (dispatch) => ({ });
+const mapDispatchToProps = (dispatch) => ({
+    getSearchResultsAction: (q) => dispatch(getSearchResultsAction(q)),
+    clearSearchResults: () => dispatch(clearSearchResultsAction()),
+});
 
 export default connect(
     mapStateToProps,

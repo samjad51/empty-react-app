@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.scss';
 
+import SearchInput from 'containers/SearchInput';
+
 function App() {
     return (
         <div className="app">
@@ -8,6 +10,7 @@ function App() {
             <div className="app__container">
                 Please add search box component here
             </div>
+            <SearchInput className="search" />
         </div>
     );
 }
