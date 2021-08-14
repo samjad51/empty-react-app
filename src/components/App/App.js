@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 
-import SearchInput from 'containers/SearchInput';
+import SearchInput from 'components/SearchInput';
 
 function App() {
     return (
@@ -10,7 +10,7 @@ function App() {
             <div className="app__container">
                 Please add search box component here
             </div>
-            <SearchInput className="search" />
+            <SearchInput />
         </div>
     );
 }

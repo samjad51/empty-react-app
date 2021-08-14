@@ -31,7 +31,7 @@ export function getSearchResultsAction(query) {
             // eslint-disable-next-line no-console
             console.log('data: ', data);
 
-            dispatch({ type: SEARCH_RESULTS_SUCCESS, payload: data });
+            dispatch({ type: SEARCH_RESULTS_SUCCESS, payload: (Array.isArray(data) ? data : []) });
         }).catch((err) => {
             // eslint-disable-next-line no-console
             console.log(err.message);
@@ -40,5 +40,8 @@ export function getSearchResultsAction(query) {
 }
 
 export const clearSearchResultsAction = () => (dispatch) => {
+    if (cancel !== undefined) {
+        cancel();
+    }
     dispatch({ type: CLEAR_SEARCH_RESULTS });
 };

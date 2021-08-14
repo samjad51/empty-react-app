@@ -1,41 +1,33 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import {
+    getSearchResultsAction, clearSearchResultsAction,
+} from 'actions/searchAction';
+import ResultsList from './ResultsList';
 
-import ResultsList from 'components/ResultsList';
+const SearchInput = () => {
+    const dispatch = useDispatch();
 
-const SearchInput = ({
-    className,
-    searchResults,
-    getSearchResultsAction,
-    clearSearchResults,
-}) => {
     const getSearchResults = (e) => {
         const {
             target: {
                 value: query,
             },
         } = e;
-        if (query.length > 2)getSearchResultsAction(query);
-        if (query.length <= 2)clearSearchResults();
+        if (query.length > 2) dispatch(getSearchResultsAction(query));
+        if (query.length <= 2)dispatch(clearSearchResultsAction());
     };
 
     return (
         <>
             <input
                 type="text"
-                className={className}
+                className="search"
                 onChange={getSearchResults}
             />
-            <ResultsList
-                className="search__results"
-                searchResults={searchResults}
-            />
+            <ResultsList />
         </>
     );
 };
-
-SearchInput.propTypes = { className: PropTypes.string };
-
-SearchInput.defaultProps = { className: '' };
 
 export default SearchInput;
