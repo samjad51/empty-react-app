@@ -27,7 +27,7 @@
         "eslint-plugin-react": "^7.24.0",
         "eslint-plugin-react-hooks": "^4.2.0",
         "json-server": "^0.16.3",
-        "node-sass": "4.14.1"
+        "node-sass": "7.0.0"
     },
     "scripts": {
         "start": "npm run start:mock | react-scripts start",
